@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "fsl-api",
+            "script": "npm",
+            "args" : "dev:debug"
+        }
+    ]
+}

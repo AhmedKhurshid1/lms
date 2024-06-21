@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: roamtrips-backend
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: roamtrips-be
+          image: public.ecr.aws/q5n8p2n2/roamtrips:roamtrips-be
+          ports:
+            - containerPort: 8000

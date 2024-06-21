@@ -1,0 +1,11 @@
+pipeline{
+    agent any
+    
+    stages{
+        stage('Start pm2 service'){
+            steps {
+		echo "PATH is: ${env.PATH}"
+            }
+        }  
+    }
+}
